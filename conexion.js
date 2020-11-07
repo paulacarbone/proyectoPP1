@@ -14,17 +14,14 @@ async function buscarImagenes(){
     lista.forEach(element => {
         let div=document.createElement("div");
         div.innerHTML=`
-        <h1>${element.character}</h1> 
-        <img  src=${element.image}></img>
+        <img  src=${element.image} class="card-img-top"></img>
+        <div class="card-body">
+		  <h5 class="card-title">${element.character}</h5>
+		  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
         </a>
         `
-        let button = document.createElement("button");
-        button.innerText="Usar imagen";
-        button.addEventListener("onClick", function(){
-            console.log(element);
-        });
-
-        div.appendChild(button);
         listadoImg.appendChild(div);
 
     });

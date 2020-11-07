@@ -1,12 +1,9 @@
-Access-Control-Allow-Origin
-
 const listadoImg=document.querySelector("#listImagenes");
 const input=document.querySelector("#buscador");
 console.log(input.value);
 
 async function buscarImagenes(){
-    //const url=`https://thesimpsonsquoteapi.glitch.me/quotes?count=${input.value}`;
-    const url=`https://superheroapi.com/api/10158830644866950/character-id/1`;
+    const url=`http://gateway.marvel.com/v1/public/comics?ts=1&apikey=89d3dbb59427a0bf0af2f0edb644b387;`;
     const data=await fetch(url);
     console.log(data);
     const response=await data.json();
