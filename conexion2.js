@@ -13,15 +13,11 @@ async function buscarImagenes(){
     console.log(lista);
     lista.forEach(element => {
         let div=document.createElement("div");
-        div.innerHTML=`
-        <h1>${element.character}</h1> 
-        <img  src=${element.image}></img>
-        </a>
-        `
+        div.innerHTML=` <h1>${element.character}</h1> 
+                        <img  src=${element.image}></img>
+                        </a>`
         let button = document.createElement("button");
-        button.innerText="Usar imagen";
         button.addEventListener("onClick", function(){
-            console.log(element);
         });
 
         div.appendChild(button);
